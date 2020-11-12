@@ -25,7 +25,7 @@ def search():
 		response=requests.get(url,headers=headers)
 		soup=BeautifulSoup(response.text,"lxml")
 
-		scr=soup.find_all("div",class_="r")[0]
+		scr=soup.find_all("div",class_="g")[0]
 		ah=scr.find("a")
 		
 		p=pyshorteners.Shortener()
